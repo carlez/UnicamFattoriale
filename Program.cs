@@ -35,7 +35,17 @@ namespace UnicamFattoriale
             int numeroInserito = numero;
             int risultato = 1;
             while (numero > 0) {
-                risultato *= numero;
+                try {
+                    checked 
+                    {
+                        risultato *= numero;
+                    }
+                } catch (Exception exc)
+                {
+                    Console.WriteLine("Il numero che hai digitato e' troppo grande!");
+                    Console.ReadKey();
+                    return;
+                }
                 numero--;
             }
 

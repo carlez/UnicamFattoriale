@@ -7,7 +7,7 @@ namespace UnicamFattoriale
         static void Main(string[] args)
         {
             int numero = 0;
-            
+
             while (true)
             {
                 //Stampo dei messaggi di cortesia per l'utente, così lo guido all'utilizzo del programma
@@ -32,14 +32,15 @@ namespace UnicamFattoriale
             
 
             //Calcolo il fattoriale: qui ci sono degli errori!
-            int risultato = 0;
-            while (numero >= 0) {
+            int numeroInserito = numero;
+            int risultato = 1;
+            while (numero > 0) {
                 risultato *= numero;
                 numero--;
             }
 
             //Stampo il risultato
-            Console.WriteLine($"Il fattoriale di {numero} e' {risultato}");
+            Console.WriteLine($"Il fattoriale di {numeroInserito} e' {risultato}");
             //Attendo che l'utente prema un tasto prima di uscire, altrimenti 
             Console.ReadKey();
         }
